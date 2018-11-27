@@ -17,13 +17,31 @@ public class ArrayListDemo{
 	}
 
 	public static ArrayList<Integer> removeDuplicates(ArrayList<Integer> a){
+
 		for(int i = 0; i<(a.size()-1); i++){
-			if(i == i+1){
-				a.remove(i);
-				a.remove(i);
-				i = (i-2);
+			for(int j = i+1; j < a.size(); j++){
+				if(a.get(i) == a.get(j)){
+					a.remove(j);
+					j--;
+				}
 			}
 		}
 		return a;
+	}
+
+	public static void main(String [] args){
+		ArrayList<Integer> a = new ArrayList<>();
+		for(int i = 1; i<=10; i++){
+			a.add(i);
+		}
+		ArrayList<Integer> b = new ArrayList<>();
+		for(int i = 1; i<=10; i++){
+			b.add(i);
+		}
+
+		System.out.println(combine(a,b));
+		print(a);
+		System.out.println(removeDuplicates(a));
+
 	}
 }

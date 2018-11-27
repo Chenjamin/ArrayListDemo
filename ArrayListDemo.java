@@ -15,4 +15,15 @@ public class ArrayListDemo{
 		}
 		System.out.println("");
 	}
+
+	public static ArrayList<Integer> removeDuplicates(ArrayList<Integer> a){
+		for(int i = 0; i<(a.size()-1); i++){
+			if(i == i+1){
+				a.remove(i);
+				a.remove(i);
+				i = (i-2);
+			}
+		}
+		return a;
+	}
 }

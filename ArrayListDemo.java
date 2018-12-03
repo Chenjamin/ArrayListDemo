@@ -42,7 +42,7 @@ public class ArrayListDemo{
 		System.out.println(combine(a,b));
 		print(a);
 		System.out.println(removeDuplicates(a));
-		System.out.println("Hi");
+		System.out.println("Hello");
 
 	}
 }
